@@ -14,6 +14,8 @@
 		11396E071D38E3E1006165C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11396E051D38E3E1006165C1 /* LaunchScreen.storyboard */; };
 		11396E121D38E3E1006165C1 /* AddressBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11396E111D38E3E1006165C1 /* AddressBookTests.swift */; };
 		11396E1D1D38E3E1006165C1 /* AddressBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11396E1C1D38E3E1006165C1 /* AddressBookUITests.swift */; };
+		11396E2B1D38E807006165C1 /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11396E2A1D38E807006165C1 /* SqliteManager.swift */; };
+		11396E2D1D38E991006165C1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11396E2C1D38E991006165C1 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		11396E181D38E3E1006165C1 /* AddressBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddressBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11396E1C1D38E3E1006165C1 /* AddressBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookUITests.swift; sourceTree = "<group>"; };
 		11396E1E1D38E3E1006165C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11396E2A1D38E807006165C1 /* SqliteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
+		11396E2C1D38E991006165C1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		11396E2E1D38E99F006165C1 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11396E2D1D38E991006165C1 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,8 @@
 		11396DF01D38E3E1006165C1 = {
 			isa = PBXGroup;
 			children = (
+				11396E2E1D38E99F006165C1 /* Bridge-Header.h */,
+				11396E2C1D38E991006165C1 /* libsqlite3.tbd */,
 				11396DFB1D38E3E1006165C1 /* AddressBook */,
 				11396E101D38E3E1006165C1 /* AddressBookTests */,
 				11396E1B1D38E3E1006165C1 /* AddressBookUITests */,
@@ -99,6 +107,7 @@
 			children = (
 				11396DFC1D38E3E1006165C1 /* AppDelegate.swift */,
 				11396DFE1D38E3E1006165C1 /* ViewController.swift */,
+				11396E2A1D38E807006165C1 /* SqliteManager.swift */,
 				11396E001D38E3E1006165C1 /* Main.storyboard */,
 				11396E031D38E3E1006165C1 /* Assets.xcassets */,
 				11396E051D38E3E1006165C1 /* LaunchScreen.storyboard */,
@@ -256,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11396E2B1D38E807006165C1 /* SqliteManager.swift in Sources */,
 				11396DFF1D38E3E1006165C1 /* ViewController.swift in Sources */,
 				11396DFD1D38E3E1006165C1 /* AppDelegate.swift in Sources */,
 			);
@@ -403,6 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyou100.AddressBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -414,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyou100.AddressBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridge-Header.h";
 			};
 			name = Release;
 		};
